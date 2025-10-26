@@ -21,8 +21,9 @@ public class StudentManager {
     }
     
     public Student findStudentById(String studentId) {
+        int id = Integer.parseInt(studentId);
         for (Student student : students) {
-            if (student.getStudentId().equals(studentId)) {
+            if (student.getId() == id) {
                 return student;
             }
         }
@@ -40,8 +41,9 @@ public class StudentManager {
     }
     
     public boolean updateStudent(String studentId, Student updatedStudent) {
+        int id = Integer.parseInt(studentId);
         for (int i = 0; i < students.size(); i++) {
-            if (students.get(i).getStudentId().equals(studentId)) {
+            if (students.get(i).getId() == id) {
                 students.set(i, updatedStudent);
                 saveStudentsToFile();
                 return true;
@@ -51,8 +53,9 @@ public class StudentManager {
     }
     
     public boolean deleteStudent(String studentId) {
+        int id = Integer.parseInt(studentId);
         for (int i = 0; i < students.size(); i++) {
-            if (students.get(i).getStudentId().equals(studentId)) {
+            if (students.get(i).getId() == id) {
                 students.remove(i);
                 saveStudentsToFile();
                 return true;
