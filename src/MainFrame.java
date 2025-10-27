@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-package StudentManagementSystem;
 import javax.swing.JOptionPane;
 import java.awt.CardLayout;
 import javax.swing.table.DefaultTableModel;
